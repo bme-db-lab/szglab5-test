@@ -1,17 +1,17 @@
-## Leírás
+## LeÃ­rÃ¡s
 
-Ez a submodule tesztekkel teszi teljessé az szglab5-main projektet
+Ez a submodule tesztekkel teszi teljessÃ© az szglab5-main projektet
 
-## Szükséges technológiák a futtatáshoz
+## SzÃ¼ksÃ©ges technolÃ³giÃ¡k a futtatÃ¡shoz
 
-* Az API tesztek futtatásához newman telepítése 
-npm install -g newman
+* Az API tesztek futtatÃ¡sÃ¡hoz newman telepÃ­tÃ©se 
+```npm install -g newman```
 
-* Funkcionális tesztek futtatásához lépések:
-..* Egyelöre nem rendelkezünk funkcionális tesztekkel
+* FunkcionÃ¡lis tesztek futtatÃ¡sÃ¡hoz lÃ©pÃ©sek:
+..* EgyelÅ‘re nem rendelkezÃ¼nk funkcionÃ¡lis tesztekkel
 
-## Futtatáshoz szükséges parancsok
+## FuttatÃ¡shoz szÃ¼ksÃ©ges parancsok
 
-* Newman futtatása .json megadásával és html report készítésével
-newman run api_tests/{*.json} --reporters html
+* Newman futtatÃ¡sa .json megadÃ¡sÃ¡val Ã©s html report kÃ©szÃ­tÃ©sÃ©vel
+```newman run api_tests/{*.json} --reporters html```
 
