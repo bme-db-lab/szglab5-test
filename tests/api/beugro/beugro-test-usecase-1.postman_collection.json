@@ -1,0 +1,114 @@
+{
+	"variables": [],
+	"info": {
+		"name": "beugro-test-usecase-1",
+		"_postman_id": "e038492a-872a-7b9d-8f76-d44ac402c88b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "As a teacher I create a Question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Has type questions\"] = responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"text\": \"beugro-test-usecase-1\"\n        },\n        \"type\": \"questions\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "When it's created I check if it's in the list.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"beugro-test-usecase-1\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I delete the Question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I check if the Question is deleted.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"",
+							"tests[\"Body matches string\"] = !responseBody.has(\"beugro-test-usecase-1\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

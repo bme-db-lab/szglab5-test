@@ -1,0 +1,208 @@
+{
+	"variables": [],
+	"info": {
+		"name": "beugro-test-usecase-2",
+		"_postman_id": "be00fce7-fedd-9778-18cf-86c8e3f98988",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "As a teacher I create a Question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Has type questions\"] = responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"text\": \"beugro-test-usecase-2-1\"\n        },\n        \"type\": \"questions\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "As a teacher I create an another Question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Has type questions\"] = responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"text\": \"beugro-test-usecase-2-2\"\n        },\n        \"type\": \"questions\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I create a test with these two question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"beugro-test-usecase-2-test-title\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"title\": \"beugro-test-usecase-2-test-title\"\n        },\n        \"type\": \"tests\",\n        \"relationships\": {\n            \"language\": {\n                \"data\": {\n                    \"type\": \"languages\",\n                    \"id\": 1\n                }\n            },\n            \"questions\": {\n                \"data\": [\n                    {\n                        \"type\": \"questions\",\n                        \"id\": 1\n                    },\n                    {\n                        \"type\": \"questions\",\n                        \"id\": 2\n                    }\n                ]\n            }\n        }\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "When it's created I check if it's in the list.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"beugro-test-usecase-2-test-title\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"title\": \"beugro-test-usecase-2-test-title\"\n        },\n        \"type\": \"tests\",\n        \"relationships\": {\n            \"language\": {\n                \"data\": {\n                    \"type\": \"languages\",\n                    \"id\": 1\n                }\n            },\n            \"questions\": {\n                \"data\": [\n                    {\n                        \"type\": \"questions\",\n                        \"id\": 1\n                    },\n                    {\n                        \"type\": \"questions\",\n                        \"id\": 2\n                    }\n                ]\n            }\n        }\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I delete the Test.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I check if the Test is deleted.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"",
+							"tests[\"Body matches string\"] = !responseBody.has(\"beugro-test-usecase-2-title\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
