@@ -1,0 +1,74 @@
+{
+	"variables": [],
+	"info": {
+		"name": "beugro-test-usecase-3",
+		"_postman_id": "f5ce6efb-53c4-8e21-0806-21a56f79a805",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "As a Teacher I create a Question",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Has type questions\"] = responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"text\": \"beugro-test-usecase-3\"\n        },\n        \"type\": \"questions\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "As a Teacher I edit Question's name to \"update check\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n      \"type\": \"questions\",\n      \"attributes\": {\n        \"text\": \"update check\"\n      }\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
