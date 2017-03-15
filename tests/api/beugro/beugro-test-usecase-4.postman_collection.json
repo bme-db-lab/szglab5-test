@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "beugro-test-usecase-4",
+		"_postman_id": "a42e79ad-4b07-b89f-dc23-45087147b1e1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "As a teacher I create a Question",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Has type questions\"] = responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"text\": \"beugro-test-usecase-1\"\n        },\n        \"type\": \"questions\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I add a new language",
+			"request": {
+				"url": "http://localhost:7000/languages",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"data\": {\n\"attributes\" : {\n\"name\": \"SQL\"\n},\n\"type\": \"languages\"\n}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I create a test without any Question",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"beugro-test-usecase-2-test-title\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"title\": \"beugro-test-usecase-2-test-title\"\n        },\n        \"type\": \"tests\",\n        \"relationships\": {\n            \"language\": {\n                \"data\": {\n                    \"type\": \"languages\",\n                    \"id\": 1\n                }\n            }\n        }\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I assign the Question to the Test.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:7000/questions/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n      \"type\": \"questions\",\n      \"relationships\": {\n        \"test\": {\n            \"data\": {\n                \"id\": 1,\n                \"type\": \"tests\"\n            }\n        }\n      }\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Then I check if the Question is assigned",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+							"",
+							"tests[\"Body matches string\"] = responseBody.has(\"1\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/tests",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
