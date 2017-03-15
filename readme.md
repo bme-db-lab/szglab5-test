@@ -9,6 +9,22 @@ Ez a submodule tesztekkel teszi teljessé az szglab5-main projektet
 
 * Funkcionális tesztek futtatásához lépések:
 ..* Egyelőre nem rendelkezünk funkcionális tesztekkel
+## Report generáló script
+* Fontos, hogy az alábbi mappa struktúra legyen meg:
+
+```
+project   
+│
+└───szglab5-test
+│   │   runTests.sh
+
+└───szglab5-backend
+```
+Illetve az is fontos, hogy futtatható legyen a ```./runTests.sh```
+
+Utána pedig az alábbi paranccsal tudjuk futtatni az szglab5-test mappából:
+
+```./runTests.sh```
 
 ## Futtatáshoz szükséges parancsok
 
