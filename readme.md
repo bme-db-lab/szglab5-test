@@ -12,11 +12,11 @@ Ez a submodule tesztekkel teszi teljessé az szglab5-main projektet
 
 ## Futtatáshoz szükséges parancsok
 
-* Newman futtatása .json megadásával és html report készítésével
-Fontos, hogy minden egyes teszt lefuttatása előtt ki kell adni az szglab5-backend mappájában, hogy:
+### Newman futtatása .json megadásával és html report készítésével
+* Fontos, hogy minden egyes teszt lefuttatása előtt ki kell adni az szglab5-backend mappájában, hogy:
 ```npm run cli:dev seed empty.seed.json```
-Utána ezzel a paranccsal tudunk generálni html reportot az adott tesztből.
+* Utána ezzel a paranccsal tudunk generálni html reportot az adott tesztből.
 ```newman run <path_to_test>/{*.json} --reporters html```
-Amennyiben csak console-ban szeretnénk az eredményt látni, akkor:
+* Amennyiben csak console-ban szeretnénk az eredményt látni, akkor:
 ```newman run <path_to_test>/{*.json} --reporters cli```
 
