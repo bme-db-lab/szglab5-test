@@ -72,6 +72,26 @@
 			"response": []
 		},
 		{
+			"name": "Then I add a new language",
+			"request": {
+				"url": "http://localhost:7000/languages",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"data\": {\n\"attributes\" : {\n\"name\": \"SQL\"\n},\n\"type\": \"languages\"\n}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "Then I create a test with these two question.",
 			"event": [
 				{
