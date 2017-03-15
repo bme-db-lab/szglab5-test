@@ -1,0 +1,67 @@
+{
+	"variables": [],
+	"info": {
+		"name": "beugro-test-usecase-5",
+		"_postman_id": "6f119f09-139d-c6b4-1f9b-bdcead61b0ee",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "As a teacher I create a Question.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is not 200\"] = responseCode.code !== 200;",
+							"tests[\"Has not type questions\"] = !responseBody.has(\"questions\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "When it's created I check if it's in the list.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Body not matches string\"] = !responseBody.has(\"beugro-test-usecase-1\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:7000/questions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
