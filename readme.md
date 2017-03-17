@@ -4,11 +4,12 @@ Ez a submodule tesztekkel teszi teljessé az szglab5-main projektet
 
 ## Szükséges technológiák a futtatáshoz
 
-* Az API tesztek futtatásához newman telepítése 
+* Az API tesztek futtatásához newman telepítése
 ```npm install -g newman```
 
 * Funkcionális tesztek futtatásához lépések:
-..* Egyelőre nem rendelkezünk funkcionális tesztekkel
+ Egyelőre nem rendelkezünk funkcionális tesztekkel
+
 ## Report generáló script
 * Fontos, hogy az alábbi mappa struktúra legyen meg:
 
@@ -24,7 +25,7 @@ Illetve az is fontos, hogy futtatható legyen a ```./runTests.sh```
 
 Utána pedig az alábbi paranccsal tudjuk futtatni az szglab5-test mappából:
 
-```./runTests.sh```
+```./runTests.sh ```
 
 ## Futtatáshoz szükséges parancsok
 
@@ -38,4 +39,3 @@ Utána pedig az alábbi paranccsal tudjuk futtatni az szglab5-test mappából:
 * Amennyiben csak console-ban szeretnénk az eredményt látni, akkor:
 
 ```newman run <path_to_test>/{*.json} --reporters cli```
-

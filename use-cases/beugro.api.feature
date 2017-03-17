@@ -6,7 +6,8 @@ Scenario: 1. Create and delete Test using API
    When I create a question "1. Kérdés?"
     And I create a question "2. Kérdés?"
    Then I add "language" "SQL"
-    And I create a "Test-SQL-2Q" for "SQL" with "1. Kérdés?" and "2. Kérdés?"
+    And I create a "Test-SQL-2Q" for "SQL" with "1. Kérdés?"
+    And I create a "Test-SQL-2Q" for "SQL" with "2. Kérdés?"
    Then I check the list of "Questions"
     And I check the list of "Languages"
     And I check the list of "Tests"
@@ -24,21 +25,17 @@ Scenario: 2. Update question's name
     And I search if "1. Kérdés?" is not existing
     And I search if "1. Kérdés New?" is existing
 
-   
+Scenario: 3. Update Test's relation
+  Given The szglab5-backand with API
+    And User with API key
+   When I create a "question"
+    And I create a "language"
+   Then I create a "test" without question
+   When I assign the created question to the Test
+   Then I check if the "question" is assigned to "test"
 
-   4
-   Given the backend API
-   Scenario: Update a Test's relation
-   As a teacher I create a Question.
-   Then I add a  new language
-   Then I create a Test without any Questions.
-   Then I assign the Question to the Test.
-   Then I check if the Question is assigned.
-
-
-
-   5
-   Given the backend API
-   Scenario: Create a Question with missing element in the body
-   As a teacher I create a Question.
-   Then I check if the Question is in the list.
+Scenario: 4. Create a Question with missing element in the body
+  Given The szglab5-backand with API
+    And User with API key
+   When I create a "question" with bad body
+   Then I check if the "question" is in the list.
