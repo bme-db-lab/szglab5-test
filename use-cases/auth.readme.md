@@ -1,13 +1,13 @@
-#Bejelentkezés:
-- Hallgató bejelentkezik Shibboleth-en keresztül érvényes adatokkal
-- Javító bejelentkezik Shibboleth-en  keresztül érvényes adatokkal
-- Mérésvezetõ bejelentkezik Shibboleth-en  keresztül érvényes adatokkal
-- Labor felelõs bejelentkezik Shibboleth-en  keresztül érvényes adatokkal
-- Adminisztrátor bejelentkezik Shibboleth-en  keresztül érvényes adatokkal
+# BejelentkezÃ©s:
+- HallgatÃ³ bejelentkezik Shibboleth-en keresztÃ¼l Ã©rvÃ©nyes adatokkal
+- JavÃ­tÃ³ bejelentkezik Shibboleth-en  keresztÃ¼l Ã©rvÃ©nyes adatokkal
+- MÃ©rÃ©svezetÅ‘ bejelentkezik Shibboleth-en  keresztÃ¼l Ã©rvÃ©nyes adatokkal
+- Labor felelÅ‘s bejelentkezik Shibboleth-en  keresztÃ¼l Ã©rvÃ©nyes adatokkal
+- AdminisztrÃ¡tor bejelentkezik Shibboleth-en  keresztÃ¼l Ã©rvÃ©nyes adatokkal
 	
-- Hallgató bejelentkezik e-mail címmel
-- Javító bejelentkezik e-mail címmel
-- Mérésvezetõ bejelentkezik e-mail címmel
-- Labor felelõs bejelentkezik e-mail címmel
-- Adminisztrátor bejelentkezik e-mail címmel
-- Érvénytelen adatokkal való bejelentkezés
+- HallgatÃ³ bejelentkezik e-mail cÃ­mmel
+- JavÃ­tÃ³ bejelentkezik e-mail cÃ­mmel
+- MÃ©rÃ©svezetÅ‘ bejelentkezik e-mail cÃ­mmel
+- Labor felelÅ‘s bejelentkezik e-mail cÃ­mmel
+- AdminisztrÃ¡tor bejelentkezik e-mail cÃ­mmel
+- Ã‰rvÃ©nytelen adatokkal valÃ³ bejelentkezÃ©s
