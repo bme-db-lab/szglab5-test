@@ -1,29 +1,29 @@
-## Mérésvezetõ méréssel kapcsolatos funkciói:
-#	Laborok listázása:
-		Méréshely és idõ alapján listázhatóak legyenek a mérések
-#	Laborokhoz tartozó funkciók:
-	-	Hallgatók listázása
-	-	Beugró jegy módosítása
-	-	Labor jegy módosítása
-	-	Jegyek, pontok véglegesítése egyszerre vagy egyesével
-	-	Helyettesítõ mérésvezetõ rendelés önmaga helyett
-#	Mérés részletes adatainak megtekintése:
-	-	Hallgató nevének megtekintése
-	-	Hallgató NEPTUN kódjának megtekintése
-	-	Feladattípus megtekintése
-	-	Téma megtekintése
-	-	Mérés helyének és idejének megtekintése
-	-	Jegyek és pontszámok 
-	-	Megjegyzések
-	-	Git URL lekérdezése, címkékkel együtt
-#	Pontszámok, jegyek és megjegyzések véglegesítése külön-külön és együtt
-	-	Labor érdemjegy módosítása
-	-	Labor megjegyzésének módosítása
-	-	Labor megjegyzésének törlése
-	-	iMSC pontok módosítása
-	-	Hallgató áthelyezése másik laborra
-#	Beugrókkal kapcsolatos funkciók
-	-	Listázása, lekérdezése
-	-	Új beugró hozzáadása
-	-	Beugrók szerkesztése
-	-	Beugrók törlése
+# MÃ©rÃ©svezetÅ‘ mÃ©rÃ©ssel kapcsolatos funkciÃ³i:
+##	Laborok listÃ¡zÃ¡sa:
+		MÃ©rÃ©shely Ã©s idÅ‘ alapjÃ¡n listÃ¡zhatÃ³ak legyenek a mÃ©rÃ©sek
+##	Laborokhoz tartozÃ³ funkciÃ³k:
+	-	HallgatÃ³k listÃ¡zÃ¡sa
+	-	BeugrÃ³ jegy mÃ³dosÃ­tÃ¡sa
+	-	Labor jegy mÃ³dosÃ­tÃ¡sa
+	-	Jegyek, pontok vÃ©glegesÃ­tÃ©se egyszerre vagy egyesÃ©vel
+	-	HelyettesÃ­tÅ‘ mÃ©rÃ©svezetÅ‘ rendelÃ©s Ã¶nmaga helyett
+##	MÃ©rÃ©s rÃ©szletes adatainak megtekintÃ©se:
+	-	HallgatÃ³ nevÃ©nek megtekintÃ©se
+	-	HallgatÃ³ NEPTUN kÃ³djÃ¡nak megtekintÃ©se
+	-	FeladattÃ­pus megtekintÃ©se
+	-	TÃ©ma megtekintÃ©se
+	-	MÃ©rÃ©s helyÃ©nek Ã©s idejÃ©nek megtekintÃ©se
+	-	Jegyek Ã©s pontszÃ¡mok 
+	-	MegjegyzÃ©sek
+	-	Git URL lekÃ©rdezÃ©se, cÃ­mkÃ©kkel egyÃ¼tt
+##	PontszÃ¡mok, jegyek Ã©s megjegyzÃ©sek vÃ©glegesÃ­tÃ©se kÃ¼lÃ¶n-kÃ¼lÃ¶n Ã©s egyÃ¼tt
+	-	Labor Ã©rdemjegy mÃ³dosÃ­tÃ¡sa
+	-	Labor megjegyzÃ©sÃ©nek mÃ³dosÃ­tÃ¡sa
+	-	Labor megjegyzÃ©sÃ©nek tÃ¶rlÃ©se
+	-	iMSC pontok mÃ³dosÃ­tÃ¡sa
+	-	HallgatÃ³ Ã¡thelyezÃ©se mÃ¡sik laborra
+##	BeugrÃ³kkal kapcsolatos funkciÃ³k
+	-	ListÃ¡zÃ¡sa, lekÃ©rdezÃ©se
+	-	Ãšj beugrÃ³ hozzÃ¡adÃ¡sa
+	-	BeugrÃ³k szerkesztÃ©se
+	-	BeugrÃ³k tÃ¶rlÃ©se
