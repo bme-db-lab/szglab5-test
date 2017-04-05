@@ -1,22 +1,22 @@
-## Admin méréssel kapcsolatos funkciói:
-#	Méréshelyek adatainak kezelése:
-	-	Méréshelyek listázása
-	-	Méréshelyek hozzáadása
-	-	Méréshelyek módosítása
-	-	Méréshelyek törlése
-#	Méréshelyek és hallgatók összerendelése
-#	Méréshelyek és mérésvezetõk összerendelése
-#	Méréshelyek és mérésidõpontok összerendelése
-#	Feladattípusokkal kapcsolatos funkciók:
-	-	Feladattípus és értékelõk összerendelése
-	-	Feladattípus és hallgatók összerendelése
-#	Határidõk:
-	-	Hallgatói jegyzõkönyv leadásának határidejének módosítása
-	-	Jegyzõkönyv értékelésének határidejének változtatása mérésenként, illetve globálisan
-#	Véglegesítés visszavonása:
-	-	Beugró esetén
-	-	Jegyzõkönyv jegy esetén
-	-	Végleges jegy esetén
-#	Beugrókkal kapcsolatos funkciók:
-	-	Új kérdés hozzáadása
-	-	Kérdés módosítása
+# Admin mÃ©rÃ©ssel kapcsolatos funkciÃ³i:
+##	MÃ©rÃ©shelyek adatainak kezelÃ©se:
+-	MÃ©rÃ©shelyek listÃ¡zÃ¡sa
+-	MÃ©rÃ©shelyek hozzÃ¡adÃ¡sa
+-	MÃ©rÃ©shelyek mÃ³dosÃ­tÃ¡sa
+-	MÃ©rÃ©shelyek tÃ¶rlÃ©se
+-	MÃ©rÃ©shelyek Ã©s hallgatÃ³k Ã¶sszerendelÃ©se
+-	MÃ©rÃ©shelyek Ã©s mÃ©rÃ©svezetÅ‘k Ã¶sszerendelÃ©se
+-	MÃ©rÃ©shelyek Ã©s mÃ©rÃ©sidÅ‘pontok Ã¶sszerendelÃ©se
+-	FeladattÃ­pusokkal kapcsolatos funkciÃ³k:
+-	FeladattÃ­pus Ã©s Ã©rtÃ©kelÅ‘k Ã¶sszerendelÃ©se
+-	FeladattÃ­pus Ã©s hallgatÃ³k Ã¶sszerendelÃ©se
+##	HatÃ¡ridÅ‘k:
+-	HallgatÃ³i jegyzÅ‘kÃ¶nyv leadÃ¡sÃ¡nak hatÃ¡ridejÃ©nek mÃ³dosÃ­tÃ¡sa
+-	JegyzÅ‘kÃ¶nyv Ã©rtÃ©kelÃ©sÃ©nek hatÃ¡ridejÃ©nek vÃ¡ltoztatÃ¡sa mÃ©rÃ©senkÃ©nt, illetve globÃ¡lisan
+##	VÃ©glegesÃ­tÃ©s visszavonÃ¡sa:
+-	BeugrÃ³ esetÃ©n
+-	JegyzÅ‘kÃ¶nyv jegy esetÃ©n
+-	VÃ©gleges jegy esetÃ©n
+##	BeugrÃ³kkal kapcsolatos funkciÃ³k:
+-	Ãšj kÃ©rdÃ©s hozzÃ¡adÃ¡sa
+-	KÃ©rdÃ©s mÃ³dosÃ­tÃ¡sa
