@@ -19,4 +19,4 @@
 # Leadás:
 - Jegyzõkönyv leadási határidejének megtekintése
 - Minden címke listázása az adott labor repository-jából
-- Végleges címke beállítása az címke listábó
+- Végleges címke beállítása az címke listából
