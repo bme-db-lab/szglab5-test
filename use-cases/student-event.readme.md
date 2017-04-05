@@ -1,22 +1,22 @@
-## Hallgató méréssel kapcsolatos funkciói:
-# Listázás:
-- Mérés adatainak megjelentése: 
-- Mérések helyszínének lekérdezése
-- Mérés idõpontjának lekérdezése
-- Laborvezetõi megjegyzés lekérdezése
-- Mérésvezetõ személyének adatainak a lekérdezése
-- Mérésvezetõ elérhetõségeinek lekérdezése
-- Kezdeti jelszavak megtekintése
-- Git remote URL lekérdezése
-- Végleges értékelésnek a megjelenítése:
-- Beugró jegy lekérdezése
-- Jegyzõkönyvjegy lekérdezése
-- Jegyzõkönyv riport lekérdezése
-- Javító nevének lekérdezése
-- Labor jegy lekérdezése
-- Labor riport lekérdezése
-- Megjegyzések lekérdezése
-# Leadás:
-- Jegyzõkönyv leadási határidejének megtekintése
-- Minden címke listázása az adott labor repository-jából
-- Végleges címke beállítása az címke listából
+# HallgatÃ³ mÃ©rÃ©ssel kapcsolatos funkciÃ³i:
+## ListÃ¡zÃ¡s:
+### MÃ©rÃ©s adatainak megjelentÃ©se: 
+- MÃ©rÃ©sek helyszÃ­nÃ©nek lekÃ©rdezÃ©se
+- MÃ©rÃ©s idÅ‘pontjÃ¡nak lekÃ©rdezÃ©se
+- LaborvezetÅ‘i megjegyzÃ©s lekÃ©rdezÃ©se
+- MÃ©rÃ©svezetÅ‘ szemÃ©lyÃ©nek adatainak a lekÃ©rdezÃ©se
+- MÃ©rÃ©svezetÅ‘ elÃ©rhetÅ‘sÃ©geinek lekÃ©rdezÃ©se
+- Kezdeti jelszavak megtekintÃ©se
+- Git remote URL lekÃ©rdezÃ©se
+### VÃ©gleges Ã©rtÃ©kelÃ©snek a megjelenÃ­tÃ©se:
+- BeugrÃ³ jegy lekÃ©rdezÃ©se
+- JegyzÅ‘kÃ¶nyvjegy lekÃ©rdezÃ©se
+- JegyzÅ‘kÃ¶nyv riport lekÃ©rdezÃ©se
+- JavÃ­tÃ³ nevÃ©nek lekÃ©rdezÃ©se
+- Labor jegy lekÃ©rdezÃ©se
+- Labor riport lekÃ©rdezÃ©se
+- MegjegyzÃ©sek lekÃ©rdezÃ©se
+## LeadÃ¡s:
+- JegyzÅ‘kÃ¶nyv leadÃ¡si hatÃ¡ridejÃ©nek megtekintÃ©se
+- Minden cÃ­mke listÃ¡zÃ¡sa az adott labor repository-jÃ¡bÃ³l
+- VÃ©gleges cÃ­mke beÃ¡llÃ­tÃ¡sa az cÃ­mke listÃ¡bÃ³l
