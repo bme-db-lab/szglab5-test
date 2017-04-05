@@ -1,44 +1,44 @@
-## Javító méréssel kapcsolatos  funkciói:
--	Javítók számának lekérdezése
--	Javítók számának szûrése feladattípus szerint
-##	Mérések:
--		Mérések listázása
-#		Mérések szûrése:
--			Téma szerint (Oracle, SQL, JDBC)
--			Hallgató szerint
--			Dátum szerint
--			Méréshely szerint
--			Mérésvezetõk szerint
-##	Jegyzõkönyvek:
--		Jegyzõkönyvek listázása
--		Jegyzõkönyv leadásának ideje
--		Jegyzõkönyv véglegesítésének kezdeményezése javítás alatt lévõ állapotban is
-#		Jegyzõkönyvek szûrése:
--			Feladattípus szerint
--			Státusz szerint (javított, javítatlan, javítás alatt, véglegesített)
--			Jegyzõkönyvre adott jegy
--		Jegyzõkönyv feloldása
--		Git repository URL lekérése
--		Leadási határidõ
-#		Jegyzõkönyv véglegesítése elõtti funkciók
--			Érdemjegy módosítása a javító által
--			Megjegyzés módosítása a javító által
--			Megjegyzés törlése a javító által
--			Érdemjegy módosítása másik javító által
--			Megjegyzés módosítása másik javító által
--			Megjegyzés törlése másik javító által
--		Jegyzõkönyv véglegesítése
-#		Adott jegyzõkönyvhöz kapcsolódó adatok lekérdezése:
--			Hallgató neve
--			Hallgató neptun kódja
--			Hallgató elérhetõsége
--			Téma (mérés)
--			Feladattípus
--			Mérés ideje
--			Leadási határidõ
--			Git repo végleges címkéje
--			Beadás ideje
--			Beadás határidõn belül vagy kívül történt
--			Érdemjegyek
+# JavÃ­tÃ³ mÃ©rÃ©ssel kapcsolatos  funkciÃ³i:
+-	JavÃ­tÃ³k szÃ¡mÃ¡nak lekÃ©rdezÃ©se
+-	JavÃ­tÃ³k szÃ¡mÃ¡nak szÅ±rÃ©se feladattÃ­pus szerint
+##	MÃ©rÃ©sek:
+-		MÃ©rÃ©sek listÃ¡zÃ¡sa
+###		MÃ©rÃ©sek szÅ±rÃ©se:
+-			TÃ©ma szerint (Oracle, SQL, JDBC)
+-			HallgatÃ³ szerint
+-			DÃ¡tum szerint
+-			MÃ©rÃ©shely szerint
+-			MÃ©rÃ©svezetÅ‘k szerint
+##	JegyzÅ‘kÃ¶nyvek:
+-		JegyzÅ‘kÃ¶nyvek listÃ¡zÃ¡sa
+-		JegyzÅ‘kÃ¶nyv leadÃ¡sÃ¡nak ideje
+-		JegyzÅ‘kÃ¶nyv vÃ©glegesÃ­tÃ©sÃ©nek kezdemÃ©nyezÃ©se javÃ­tÃ¡s alatt lÃ©vÅ‘ Ã¡llapotban is
+###		JegyzÅ‘kÃ¶nyvek szÅ±rÃ©se:
+-			FeladattÃ­pus szerint
+-			StÃ¡tusz szerint (javÃ­tott, javÃ­tatlan, javÃ­tÃ¡s alatt, vÃ©glegesÃ­tett)
+-			JegyzÅ‘kÃ¶nyvre adott jegy
+-		JegyzÅ‘kÃ¶nyv feloldÃ¡sa
+-		Git repository URL lekÃ©rÃ©se
+-		LeadÃ¡si hatÃ¡ridÅ‘
+##		JegyzÅ‘kÃ¶nyv vÃ©glegesÃ­tÃ©se elÅ‘tti funkciÃ³k
+-			Ã‰rdemjegy mÃ³dosÃ­tÃ¡sa a javÃ­tÃ³ Ã¡ltal
+-			MegjegyzÃ©s mÃ³dosÃ­tÃ¡sa a javÃ­tÃ³ Ã¡ltal
+-			MegjegyzÃ©s tÃ¶rlÃ©se a javÃ­tÃ³ Ã¡ltal
+-			Ã‰rdemjegy mÃ³dosÃ­tÃ¡sa mÃ¡sik javÃ­tÃ³ Ã¡ltal
+-			MegjegyzÃ©s mÃ³dosÃ­tÃ¡sa mÃ¡sik javÃ­tÃ³ Ã¡ltal
+-			MegjegyzÃ©s tÃ¶rlÃ©se mÃ¡sik javÃ­tÃ³ Ã¡ltal
+-		JegyzÅ‘kÃ¶nyv vÃ©glegesÃ­tÃ©se
+##		Adott jegyzÅ‘kÃ¶nyvhÃ¶z kapcsolÃ³dÃ³ adatok lekÃ©rdezÃ©se:
+-			HallgatÃ³ neve
+-			HallgatÃ³ neptun kÃ³dja
+-			HallgatÃ³ elÃ©rhetÅ‘sÃ©ge
+-			TÃ©ma (mÃ©rÃ©s)
+-			FeladattÃ­pus
+-			MÃ©rÃ©s ideje
+-			LeadÃ¡si hatÃ¡ridÅ‘
+-			Git repo vÃ©gleges cÃ­mkÃ©je
+-			BeadÃ¡s ideje
+-			BeadÃ¡s hatÃ¡ridÅ‘n belÃ¼l vagy kÃ­vÃ¼l tÃ¶rtÃ©nt
+-			Ã‰rdemjegyek
 -			iMSc pont
--			Megjegyzések
+-			MegjegyzÃ©sek
