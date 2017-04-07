@@ -1,4 +1,4 @@
-# Hallgató méréssel kapcsolatos funkciói:
+﻿# Hallgató méréssel kapcsolatos funkciói:
 ## Listázás:
 ### Mérés adatainak megjelentése: 
 - Mérések helyszínének lekérdezése
@@ -15,7 +15,6 @@
 - Javító nevének lekérdezése
 - Labor jegy lekérdezése
 - Labor riport lekérdezése
-- Megjegyzések lekérdezése
 ## Leadás:
 - Jegyzőkönyv leadási határidejének megtekintése
 - Minden címke listázása az adott labor repository-jából
