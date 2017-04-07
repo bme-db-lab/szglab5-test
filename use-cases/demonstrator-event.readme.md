@@ -1,6 +1,6 @@
 ﻿# Mérésvezető méréssel kapcsolatos funkciói:
 ##	Laborok listázása:
-		Méréshely és idő alapján listázhatóak legyenek a mérések
+- Méréshely és idő alapján listázhatóak legyenek a mérések
 ## Laborokhoz tartozó funkciók:
 - Hallgatók listázása
 - Beugró jegy módosítása
