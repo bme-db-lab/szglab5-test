@@ -1,4 +1,4 @@
-# Javító méréssel kapcsolatos  funkciói:
+﻿# Javító méréssel kapcsolatos  funkciói:
 -	Javítók számának lekérdezése
 -	Javítók számának szűrése feladattípus szerint
 ##	Mérések:
@@ -17,6 +17,7 @@
 -			Feladattípus szerint
 -			Státusz szerint (javított, javítatlan, javítás alatt, véglegesített)
 -			Jegyzőkönyvre adott jegy
+- 		Jegyzőkönyv lefoglalása
 -		Jegyzőkönyv feloldása
 -		Git repository URL lekérése
 -		Leadási határidő
