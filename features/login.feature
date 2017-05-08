@@ -11,11 +11,11 @@ Feature: As a registered user I want to login
     Then I logout
 
     Examples:
-      | role          | uname     | pass  |
-      | admin         | admin     | admin |
-      | demonstrator  | admin     | admin |
-      | corrector     | admin     | admin |
-      | student       | admin     | admin |
+      | role          | uname         | 12345 |
+      | admin         | admin         | 12345 |
+      | demonstrator  | demonstrator  | 12345 |
+      | corrector     | corrector     | 12345 |
+      | student       | student       | 12345 |
 
   Scenario Outline: Check the login with wrong parameters
     When I navigate to the login page on "dev" environment
@@ -34,6 +34,3 @@ Feature: As a registered user I want to login
     When I navigate to the login page on "dev" environment
     When I click on "Login with BME account" button
     Then BME Auth page appears
-
-
-

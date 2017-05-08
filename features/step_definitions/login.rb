@@ -17,10 +17,6 @@ end
 Then(/^I check if the (.*) page appears$/) do |role|
     if role.downcase.include?('admin')
 
-        #modulváltás átmenetileg
-        find(:xpath, '//li[@title="felhasználó modul váltása"]').click
-        find('li', :text => 'Admin', :match => :prefer_exact).click
-
         find('button', :text => 'Statisztikák', :match => :prefer_exact).click
         find('button', :text => 'Felhasználók', :match => :prefer_exact).click
         find('button', :text => 'Hirdetmények', :match => :prefer_exact).click
@@ -30,26 +26,14 @@ Then(/^I check if the (.*) page appears$/) do |role|
 
     elsif role.downcase.include?('demonstrator')
 
-        #modulváltás átmenetileg
-        find(:xpath, '//li[@title="felhasználó modul váltása"]').click
-        find('li', :text => 'Demonstrátor', :match => :prefer_exact).click
-
         find('button', :text => 'Demonstrátor', :match => :prefer_exact).click
         find('button', :text => 'Beugrók', :match => :prefer_exact).click
 
     elsif role.downcase.include?('corrector')
 
-        #modulváltás átmenetileg
-        find(:xpath, '//li[@title="felhasználó modul váltása"]').click
-        find('li', :text => 'Javító', :match => :prefer_exact).click
-
         find('button', :text => 'Javító', :match => :prefer_exact).click
 
     elsif role.downcase.include?('student')
-
-        #modulváltás átmenetileg
-        find(:xpath, '//li[@title="felhasználó modul váltása"]').click
-        find('li', :text => 'Hallgató', :match => :prefer_exact).click
 
         find('button', :text => 'Laborok', :match => :prefer_exact).click
     end
@@ -78,4 +62,3 @@ Then(/^BME Auth page appears$/) do
     sleep(1)
     ##must be implemented by frontend/backend
 end
-
