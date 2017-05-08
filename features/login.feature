@@ -11,7 +11,7 @@ Feature: As a registered user I want to login
     Then I logout
 
     Examples:
-      | role          | uname         | 12345 |
+      | role          | uname         | pass  |
       | admin         | admin         | 12345 |
       | demonstrator  | demonstrator  | 12345 |
       | corrector     | corrector     | 12345 |
