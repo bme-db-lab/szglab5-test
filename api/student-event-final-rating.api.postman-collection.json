@@ -1,0 +1,299 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hallgató - Végleges értékelésnek a megjelenítése",
+		"_postman_id": "11e40507-50cf-f171-bd01-e5c405f91d81",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Beugró jegy lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /deliverables/1 and it should return a JSON which contains grade attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns a deliverable with grade\"] = responseBody.has(\"grade\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Javító nevének lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /deliverables/1/corrector and it should return a JSON which contains corrector's information",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns corrector's name\"] = responseBody.has(\"displayName\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/1/corrector",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jegyzőkönyv riport lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /deliverables/1 and it should return a JSON which contains comment attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns a deliverable with comment\"] = responseBody.has(\"comment\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jegyzőkönyvjegy lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /deliverables/1 and it should return a JSON which grade attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns a deliverable with grade\"] = responseBody.has(\"grade\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

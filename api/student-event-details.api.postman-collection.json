@@ -1,0 +1,443 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hallgató - Mérés adatainak megjelenítése",
+		"_postman_id": "f93d48ce-fff6-6998-ddaf-028230c3827e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Git remote URL lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /deliverables/1 and it should return a JSON which contains url attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns a deliverable with url\"] = responseBody.has(\"url\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Laborvezetői megjegyzés lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /events/1 and it should return a JSON which contains comment attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns event with comment\"] = responseBody.has(\"comment\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/events/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mérés időpontjának lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /events/1 and it should return a JSON which contains date attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns an event with a date\"] = responseBody.has(\"date\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/events/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mérések helyszínének lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /events/1 and it should return a JSON which contains location attribute",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns an event with a location\"] = responseBody.has(\"location\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/events/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mérésvezető elérhetőségeinek lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /events/1/demonstrator and it should return a JSON which contains demonstrator's email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns demonstrator's email\"] = responseBody.has(\"email\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/events/1/demonstrator",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mérésvezető személyének adatianak a lekérdezése",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a GET to /events/1/demonstrator and it should return a JSON which contains demonstrator's informations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Returns a demonstrator name\"] = responseBody.has(\"displayName\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/events/1/demonstrator",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
