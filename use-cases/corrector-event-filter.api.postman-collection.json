@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Javító - Mérések (szűrés)",
-		"_postman_id": "0f79481c-90c0-dd05-a0d5-046ecff280ca",
+		"_postman_id": "9ae92336-4a9d-af4c-e358-a4efe31b135f",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -39,7 +39,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"demonstratordenes\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{correctoruser}}\",\n\t\"password\": \"{{correctorpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -69,7 +69,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -108,7 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"demonstratordenes\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{correctoruser}}\",\n\t\"password\": \"{{correctorpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -138,7 +141,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -177,7 +183,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"demonstratordenes\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{correctoruser}}\",\n\t\"password\": \"{{correctorpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -207,7 +213,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []

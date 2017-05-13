@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Javító - Mérések (listázás)",
-		"_postman_id": "39fa0a09-cd9a-7625-22a0-af2941953b53",
+		"_postman_id": "b74a86c1-5c88-d86a-a6a4-cb92da4add20",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -39,7 +39,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"demonstratordenes\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{correctoruser}}\",\n\t\"password\": \"{{correctorpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -69,7 +69,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []

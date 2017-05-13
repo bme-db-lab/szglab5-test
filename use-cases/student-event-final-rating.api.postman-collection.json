@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Hallgató - Végleges értékelésnek a megjelenítése",
-		"_postman_id": "e84a0556-d15f-9a69-dcd2-aef4016f11ce",
+		"_postman_id": "11e40507-50cf-f171-bd01-e5c405f91d81",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -39,7 +39,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -69,7 +69,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -108,7 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -138,7 +141,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -177,7 +183,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -207,7 +213,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -246,7 +255,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -276,7 +285,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []

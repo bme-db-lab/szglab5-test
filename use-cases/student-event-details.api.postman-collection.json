@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Hallgató - Mérés adatainak megjelenítése",
-		"_postman_id": "ad50cca5-e741-dc94-d03a-e70f7c6bbe88",
+		"_postman_id": "f93d48ce-fff6-6998-ddaf-028230c3827e",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -39,7 +39,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -69,7 +69,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -108,7 +111,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -138,7 +141,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -177,7 +183,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -207,7 +213,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -246,7 +255,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -276,7 +285,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -315,7 +327,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -345,7 +357,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -384,7 +399,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"loginName\": \"joskapista\",\n\t\"password\": \"12345\"\n}"
+							"raw": "{\n\t\"loginName\": \"{{studentuser}}\",\n\t\"password\": \"{{studentpassword}}\"\n}"
 						},
 						"description": "{{url}}/auth/login"
 					},
@@ -414,7 +429,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
