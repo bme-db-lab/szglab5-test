@@ -3,5 +3,5 @@
 Ez a submodule tesztekkel teszi teljessé az szglab5-main projektet.
 
 ## Mappaszerkezet
-* feature mappa - funkcionális tesztek
+* features mappa - funkcionális tesztek
 * api mappa - végpont tesztek
