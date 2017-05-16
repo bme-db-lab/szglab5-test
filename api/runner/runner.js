@@ -17,8 +17,8 @@ async.mapSeries(testFiles,
     newman.run({
       collection:   testsFolder+testFile,
       environment:  testsFolder+'environment.json',
-      reporters:        ['cli','html'],
-      reporter: { html: { export : '../output/'+testFile+'.html'}}
+      reporters:        ['cli','html','junit'],
+      reporter: { html: { export : '../output/'+testFile+'.html'}, junit: { export : '../junit/'+testFile+'.xml'}}
     }, (err, result) => {
       if (err) {
         return callback(err);
