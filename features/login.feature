@@ -1,4 +1,4 @@
-﻿Feature: As a registered user I want to login 
+﻿Feature: As a registered user I want to login
 
   Scenario: Check the login form elements
     When I navigate to the login page on "dev" environment
