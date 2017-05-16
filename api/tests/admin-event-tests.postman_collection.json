@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Admin - Beugrókkal kapcsolatos funkciók",
+		"_postman_id": "870632e8-3d66-c6e1-f13b-b9437a2cd6b0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Kérdés módosítása",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{adminuser}}\",\n\t\"password\": \"{{adminpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Új kérdés hozzáadása",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{adminuser}}\",\n\t\"password\": \"{{adminpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
