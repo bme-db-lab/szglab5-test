@@ -1,0 +1,163 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Admin - Határidő",
+		"_postman_id": "13342479-b75f-88ea-5574-05214f410b71",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hallgatói jegyzőkönyv leadásának határidejének módosítása",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{adminuser}}\",\n\t\"password\": \"{{adminpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a POST to /deliverables/2 with attribute deadline and it should return a No Content",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/2",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"type\": \"deliverables\",\n    \"id\": \"2\",\n    \"attributes\": {\n      \"deadline\": \"2017-03-30T12:11:17.576Z\"\n    }\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jegyzőkönyv értékelésének határidejének határidejének változtatása mérésenként",
+			"description": "",
+			"item": [
+				{
+					"name": "Given working token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loginName\": \"{{adminuser}}\",\n\t\"password\": \"{{adminpassword}}\"\n}"
+						},
+						"description": "{{url}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Then I send a POST to /deliverables/2 with attribute deadline and it should return a No Content",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/deliverables/2",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": {\n    \"type\": \"deliverables\",\n    \"id\": \"2\",\n    \"attributes\": {\n      \"deadline\": \"2017-03-30T12:11:17.576Z\"\n    }\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
