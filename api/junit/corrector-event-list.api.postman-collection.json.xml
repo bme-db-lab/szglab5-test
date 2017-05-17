@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Javító - Mérések (listázás)">
+  <testsuite name="Mérések listázása / Given working token" id="d818d285-b9f9-4665-a52c-7f5fa647a089" tests="1" time="0.491">
+    <testcase name="Status code is 200"/>
+  </testsuite>
+  <testsuite name="Mérések listázása / Then I send a GET to /events/1 and it should return a JSON which contains event informations" id="164b893d-a80a-4f36-90c2-2ae38ced3f94" tests="2" time="0.212">
+    <testcase name="Status code is 200"/>
+    <testcase name="Returns an event"/>
+  </testsuite>
+</testsuites>
